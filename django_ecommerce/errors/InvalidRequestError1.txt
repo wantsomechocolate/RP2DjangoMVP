@@ -1,0 +1,72 @@
+http://dpaste.com/31HEW4X#wrap
+
+InvalidRequestError at /register
+Invalid token id: None
+Request Method:	POST
+Request URL:	http://localhost:8000/register
+Django Version:	1.5.5
+Exception Type:	InvalidRequestError
+Exception Value:	
+Invalid token id: None
+Exception Location:	/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages/stripe/__init__.py in handle_api_error, line 244
+Python Executable:	/home/wantsomechocolate/Code/RP2DjangoMVP/env/bin/python
+Python Version:	2.7.5
+Python Path:	
+['/home/wantsomechocolate/Code/RP2DjangoMVP/django_ecommerce',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/lib/python2.7',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/lib/python2.7/plat-x86_64-linux-gnu',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/lib/python2.7/lib-tk',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/lib/python2.7/lib-old',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/lib/python2.7/lib-dynload',
+ '/usr/lib/python2.7',
+ '/usr/lib/python2.7/plat-x86_64-linux-gnu',
+ '/usr/lib/python2.7/lib-tk',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages',
+ '/home/wantsomechocolate/Code/RP2DjangoMVP/env/lib/python2.7/site-packages']
+Server time:	Mon, 1 Sep 2014 02:09:24 -0500
+
+Environment:
+
+
+Request Method: POST
+Request URL: http://localhost:8000/register
+
+Django Version: 1.5.5
+Python Version: 2.7.5
+Installed Applications:
+('django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.sites',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'django.contrib.admin',
+ 'main',
+ 'django.contrib.flatpages',
+ 'contact',
+ 'payments')
+Installed Middleware:
+('django.middleware.common.CommonMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware')
+
+
+Traceback:
+File "/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages/django/core/handlers/base.py" in get_response
+  115.                         response = callback(request, *callback_args, **callback_kwargs)
+File "/home/wantsomechocolate/Code/RP2DjangoMVP/django_ecommerce/payments/views.py" in register
+  61. 				plan="gold",
+File "/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages/stripe/__init__.py" in create
+  703.     response, api_key = requestor.request('post', url, params)
+File "/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages/stripe/__init__.py" in request
+  234.     resp = self.interpret_response(rbody, rcode)
+File "/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages/stripe/__init__.py" in interpret_response
+  306.       self.handle_api_error(rbody, rcode, resp)
+File "/home/wantsomechocolate/Code/RP2DjangoMVP/env/local/lib/python2.7/site-packages/stripe/__init__.py" in handle_api_error
+  244.       raise InvalidRequestError(error.get('message'), error.get('param'), rbody, rcode, resp)
+
+Exception Type: InvalidRequestError at /register
+Exception Value: Invalid token id: None

@@ -1,4 +1,4 @@
-#!/home/wantsomechocolate/Code/Django/env/bin/python
+#!/home/wantsomechocolate/Code/RP2DjangoMVP/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":
